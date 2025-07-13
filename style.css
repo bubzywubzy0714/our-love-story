@@ -9,6 +9,7 @@ body {
   background: #fff0f5;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 header {
@@ -25,6 +26,7 @@ header h1 {
 header p {
   font-style: italic;
   color: #555;
+  margin-top: 0.5rem;
 }
 
 .timeline {
@@ -74,8 +76,11 @@ footer {
   z-index: 999;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   border-radius: 12px;
+  background: white;
+  padding: 4px;
 }
 
+/* Falling hearts container */
 .hearts {
   position: fixed;
   top: 0;
@@ -87,13 +92,15 @@ footer {
   z-index: 1000;
 }
 
+/* Each heart */
 .heart {
   position: absolute;
   width: 20px;
   height: 20px;
   background-color: pink;
   transform: rotate(45deg);
-  animation: fall 5s linear infinite;
+  animation: fall 8s linear infinite;
+  opacity: 0.8;
 }
 
 .heart::before,
@@ -119,7 +126,7 @@ footer {
 @keyframes fall {
   0% {
     transform: translateY(-100px) rotate(45deg);
-    opacity: 1;
+    opacity: 0.8;
   }
   100% {
     transform: translateY(100vh) rotate(45deg);
@@ -127,3 +134,23 @@ footer {
   }
 }
 
+/* Optional: Make site look better on mobile */
+@media screen and (max-width: 500px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .music-player {
+    width: 100%;
+    top: unset;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  iframe {
+    width: 90% !important;
+  }
+}
