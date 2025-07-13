@@ -66,6 +66,7 @@ footer {
   background: #ffccdc;
   color: #333;
 }
+
 .music-player {
   position: fixed;
   top: 20px;
@@ -74,6 +75,7 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   border-radius: 12px;
 }
+
 .hearts {
   position: fixed;
   top: 0;
