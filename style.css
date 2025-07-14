@@ -141,14 +141,18 @@ footer {
   }
 
   .music-player {
-    width: 100%;
-    top: unset;
-    bottom: 20px;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-  }
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 6px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: auto;
+  max-width: 300px;
+  overflow: hidden;
+}
 
   iframe {
     width: 90% !important;
